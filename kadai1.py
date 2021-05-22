@@ -1,21 +1,13 @@
-### 検索ツールサンプル
-### これをベースに課題の内容を追記してください
-
-# 検索ソース
 source=["ねずこ","たんじろう","きょうじゅろう","ぎゆう","げんや","かなお","ぜんいつ"]
 
-### 検索ツール
-def check(n):
-            
-    ### ここに検索ロジックを書く
-    for _ in source:
-        if _ == n:
-            print(f"{n}が見つかりした")
-            return
-    print(f"{n}は見つかりません")
+def search():
+    word =input("ねずこ")
+  
+    if word in source:
+        print("{}が見つかりした".format(word))
+        return
+    print("{}が見つかりません".format(word))
+
         
-check("たんじろう")
-check("ねこ")    
-    
-source.append("ねこ")
-print(source) 
+if __name__ == "__main__":
+    search()
